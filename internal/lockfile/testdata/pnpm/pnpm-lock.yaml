@@ -1,0 +1,31 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+
+importers:
+  .:
+    dependencies:
+      zod:
+        specifier: ^3.22.4
+        version: 3.22.4
+      '@trpc/server':
+        specifier: ^10.45.0
+        version: 10.45.0(typescript@5.4.2)
+    devDependencies:
+      typescript:
+        specifier: ^5.4.2
+        version: 5.4.2
+
+packages:
+  '@trpc/server@10.45.0':
+    resolution: {integrity: sha512-abc}
+
+  typescript@5.4.2:
+    resolution: {integrity: sha512-def}
+
+  undici-types@5.26.5:
+    resolution: {integrity: sha512-ghi}
+
+  zod@3.22.4:
+    resolution: {integrity: sha512-jkl}

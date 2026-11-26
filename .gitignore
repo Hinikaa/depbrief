@@ -1,0 +1,5 @@
+/depbrief
+*.test
+*.out
+coverage.txt
+.DS_Store
