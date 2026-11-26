@@ -25,6 +25,8 @@ const (
 	defaultConc = 6
 )
 
+var version = "dev"
+
 type cliConfig struct {
 	format      string
 	directOnly  bool
@@ -51,6 +53,10 @@ func run(ctx context.Context, args []string, stdout, stderr io.Writer, regEndpoi
 	sub := args[0]
 	if sub == "-h" || sub == "--help" || sub == "help" {
 		printUsage(stdout)
+		return exitClean
+	}
+	if sub == "-v" || sub == "--version" || sub == "version" {
+		fmt.Fprintf(stdout, "depbrief %s\n", version)
 		return exitClean
 	}
 
@@ -510,6 +516,7 @@ func printUsage(w io.Writer) {
 Usage:
   depbrief scan [dir] [flags]
   depbrief diff <old-lock> <new-lock> [flags]
+  depbrief version
 
 Flags:
   --format text|markdown|json       Output format (default: text)

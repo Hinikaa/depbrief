@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/Hinikaa/depbrief/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Hinikaa/depbrief/ci.yml?style=flat-square&label=ci" alt="CI"></a>
+  <a href="https://github.com/Hinikaa/depbrief/releases"><img src="https://img.shields.io/github/v/release/Hinikaa/depbrief?style=flat-square&color=58a6ff" alt="Release"></a>
   <img src="https://img.shields.io/badge/go-1.22%2B-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go 1.22+">
   <img src="https://img.shields.io/badge/external_deps-0-2ea043?style=flat-square" alt="Zero external dependencies">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555555?style=flat-square" alt="MIT License"></a>
@@ -24,13 +25,19 @@
 
 ## Install
 
+Download a prebuilt static binary from [Releases](https://github.com/Hinikaa/depbrief/releases) (`linux/amd64`, `linux/arm64`, `darwin/amd64`, `darwin/arm64`, `windows/amd64`, `windows/arm64`):
+
 ```sh
-go install github.com/Hinikaa/depbrief/cmd/depbrief@latest
+curl -fsSLO https://github.com/Hinikaa/depbrief/releases/download/v0.1.0/depbrief_0.1.0_linux_amd64.tar.gz
+curl -fsSLO https://github.com/Hinikaa/depbrief/releases/download/v0.1.0/checksums.txt
+sha256sum --ignore-missing -c checksums.txt
+tar -xzf depbrief_0.1.0_linux_amd64.tar.gz depbrief
 ```
 
-Or build from source:
+Or install / build with Go:
 
 ```sh
+go install github.com/Hinikaa/depbrief/cmd/depbrief@latest
 go build -o depbrief ./cmd/depbrief
 ```
 

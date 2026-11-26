@@ -98,3 +98,20 @@ require (
 		t.Errorf("indirect dep should be skipped by default when direct info exists")
 	}
 }
+
+func TestVersionFlag(t *testing.T) {
+	orig := version
+	version = "v0.1.0-test"
+	defer func() { version = orig }()
+
+	for _, arg := range []string{"-v", "--version", "version"} {
+		var stdout, stderr bytes.Buffer
+		code := run(context.Background(), []string{arg}, &stdout, &stderr, registry.Endpoints{}, changelog.Options{})
+		if code != exitClean {
+			t.Fatalf("%s: code = %d, want 0", arg, code)
+		}
+		if strings.TrimSpace(stdout.String()) != "depbrief v0.1.0-test" {
+			t.Fatalf("%s: stdout = %q, want %q", arg, stdout.String(), "depbrief v0.1.0-test\n")
+		}
+	}
+}
