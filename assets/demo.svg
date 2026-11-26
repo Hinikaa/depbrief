@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="436" viewBox="0 0 880 436" role="img" aria-label="depbrief -- lockfile upgrade risk and changelog brief">
+  <rect width="880" height="436" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <path d="M0 10 a10 10 0 0 1 10 -10 h860 a10 10 0 0 1 10 10 v28 h-880 z" fill="#161b22"/>
+  <line x1="0" y1="38" x2="880" y2="38" stroke="#30363d" stroke-width="1"/>
+  <circle cx="20" cy="19" r="5.5" fill="#ff5f56"/>
+  <circle cx="38" cy="19" r="5.5" fill="#ffbd2e"/>
+  <circle cx="56" cy="19" r="5.5" fill="#27c93f"/>
+  <text x="440" y="23" text-anchor="middle" fill="#8b949e" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">depbrief -- lockfile upgrade risk and changelog brief</text>
+  <text x="24" y="76" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#3fb950" xml:space="preserve">$ </tspan><tspan fill="#58a6ff" xml:space="preserve">depbrief scan . --fail-on security</tspan></text>
+  <text x="24" y="98" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#8b949e" xml:space="preserve">depbrief scan: ./package-lock.json</tspan></text>
+  <text x="24" y="120" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#e6edf3" xml:space="preserve">Checked: 14 | Upgrades: 4 | Major: 2 | </tspan><tspan fill="#f85149" xml:space="preserve">Security: 1</tspan><tspan fill="#e6edf3" xml:space="preserve"> | </tspan><tspan fill="#d29922" xml:space="preserve">Breaking: 2</tspan></text>
+  <text x="24" y="164" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#f85149" xml:space="preserve">=== SECURITY (1) ===</tspan></text>
+  <text x="24" y="186" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#e6edf3" xml:space="preserve">express               4.18.2 -&gt; 5.0.1   [npm, direct, MAJOR]</tspan></text>
+  <text x="24" y="208" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#f85149" xml:space="preserve">  [SECURITY 5.0.1] </tspan><tspan fill="#e6edf3" xml:space="preserve">Fix open redirect in res.location (CVE-2024-43796)</tspan></text>
+  <text x="24" y="230" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#d29922" xml:space="preserve">  [BREAKING 5.0.0] </tspan><tspan fill="#e6edf3" xml:space="preserve">Drop Node &lt; 18 and remove app.del()</tspan></text>
+  <text x="24" y="274" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#d29922" xml:space="preserve">=== BREAKING (1) ===</tspan></text>
+  <text x="24" y="296" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#e6edf3" xml:space="preserve">@tanstack/react-query 4.36.1 -&gt; 5.50.0  [npm, direct, MAJOR]</tspan></text>
+  <text x="24" y="318" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#d29922" xml:space="preserve">  [BREAKING 5.0.0] </tspan><tspan fill="#e6edf3" xml:space="preserve">Remove query callback options onSuccess/onError</tspan></text>
+  <text x="24" y="362" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#58a6ff" xml:space="preserve">=== DEPRECATIONS / RUNTIME (1) ===</tspan></text>
+  <text x="24" y="384" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#e6edf3" xml:space="preserve">vitest                1.2.0  -&gt; 2.1.0   [npm, direct, MAJOR]</tspan></text>
+  <text x="24" y="406" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5"><tspan fill="#58a6ff" xml:space="preserve">  [RUNTIME 2.0.0]  </tspan><tspan fill="#e6edf3" xml:space="preserve">Requires Node.js &gt;= 20.0.0</tspan></text>
+</svg>

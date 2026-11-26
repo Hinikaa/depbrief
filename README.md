@@ -1,6 +1,26 @@
-# depbrief
+<h1 align="center">depbrief</h1>
 
-`depbrief` reads project lockfiles (or diffs two lockfiles), resolves updated dependencies to their upstream GitHub repositories, fetches intermediate GitHub Releases and `CHANGELOG.md` sections between the locked and target versions, and prints a consolidated breaking-change and security upgrade brief. Built with the Go 1.22+ standard library with zero external dependencies.
+<p align="center">
+  <strong>Single-binary CLI that turns lockfile upgrades into one breaking-change and security brief.</strong><br>
+  Go 1.22+ standard library only &middot; zero external dependencies &middot; npm, pnpm, Cargo, uv, and Go
+</p>
+
+<p align="center">
+  <a href="https://github.com/Hinikaa/depbrief/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Hinikaa/depbrief/ci.yml?style=flat-square&label=ci" alt="CI"></a>
+  <img src="https://img.shields.io/badge/go-1.22%2B-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go 1.22+">
+  <img src="https://img.shields.io/badge/external_deps-0-2ea043?style=flat-square" alt="Zero external dependencies">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555555?style=flat-square" alt="MIT License"></a>
+</p>
+
+<p align="center">
+  <img src="assets/demo.svg" alt="depbrief demo" width="840">
+</p>
+
+---
+
+## Why
+
+`npm outdated` and `cargo outdated` print version numbers without telling you what broke across skipped minor or major releases. `depbrief` parses your lockfile (or diffs two lockfiles), resolves updated dependencies to their upstream GitHub repositories, fetches every intermediate GitHub Release and `CHANGELOG.md` section in `(from, to]`, strips bot/chore noise, and groups actionable entries into `SECURITY`, `BREAKING`, `DEPRECATIONS / RUNTIME`, and `OTHER UPGRADES`.
 
 ## Install
 
@@ -28,6 +48,12 @@ Diff two lockfiles directly:
 ```sh
 depbrief diff old/package-lock.json new/package-lock.json
 depbrief diff Cargo.lock.old Cargo.lock.new --no-changelog --format json
+```
+
+Run the included offline fixture demo:
+
+```sh
+./demo/run-demo.sh
 ```
 
 Set `GITHUB_TOKEN` in the environment to raise GitHub API rate limits when fetching releases across many packages.
@@ -58,4 +84,4 @@ Exit codes: `0` clean, `1` `--fail-on` condition triggered, `2` error.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+[MIT](LICENSE)
